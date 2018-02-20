@@ -1,0 +1,30 @@
+
+img {
+    width: 33%
+}
+
+#first {
+    width: 10%;
+}
+
+span {
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 20pt;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+#second_paragraph {
+    border-width: 10px;
+    border-color: aqua;
+    border-style: dashed;
+}
+
+#box {
+    width : 100px;
+    height : 100px;
+    background : aqua;
+}

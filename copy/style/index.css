@@ -1,0 +1,115 @@
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* 기본적으로 underline이 생기므로 */
+    color: #8f8f8f; /* 기본 컬러가 blue이므로.. */
+}
+
+a:hover {
+    color: #fc7a02;
+    text-decoration: underline;
+}
+
+header {
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(240, 240, 240, 0.85);
+}
+
+#logo {
+    height: 100%;
+}
+
+#menu {
+    float: right;
+    height: 100%; /* menu_item의 높이를 중앙정렬하기 위해 menu div 자체에 높이를 할당함. 이 때 100%는 parent 높이의 100%만큼 비율로 높이를 갖겠다는 의미임.*/
+}
+
+.menu_item {
+    position: relative;
+    top: 50%; /* 부모 height 기준 50% 내림 */
+    display: inline-block;
+    transform: translateY(-50%); /* 내 높이 기준으로 50% 올리겠다 _-_-_ 중앙정렬을 위해... */
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+#menu > span:hover { /* menu에 마우스를 가져가면(hover) 나타나는 변화 */
+    border-bottom: solid 1px black;
+}
+
+#main {
+    width: 100%;
+}
+
+.page {
+    position: fixed;
+    top: 50%;
+
+}
+
+#next {
+    left: 100%;
+    transform: translateX(-100%); /* transform은 자신의 width / height를 기준으로 움직일 때 사용한다. */
+}
+
+.bold {
+    font-weight: bold;
+}
+
+/* article p 하면 article 하부에 있는 모든 p를 의미 */
+article > p { /* article tag 밑에 바로 오는 p tag에 대해서 */
+    text-align: center;
+}
+
+article > p:nth-child(2) { /* nth-child는 내 종류의 몇 번째가 아닌, 내가 자녀로써 몇 번째인가를 의미한다. */
+    font-size: 11pt;
+    margin-top: 12px;
+    color: #8f8f8f;
+}
+
+article > p:nth-child(3) {
+    font-size: 24pt;
+    margin-top: 16px;
+    margin-bottom: 60px;
+}
+
+.pic {
+    display: block;
+    width: 92%;
+    max-width: 800px;
+    margin: 8px auto; /* auto를 주면 자동으로 정렬해준다 단, block인 상태에서만 가능!! inline은 한 줄에 요소가 몇 개 올 지 모르니까*/
+}
+
+.interview {
+    width: 92%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.interview > p {
+    color: #8f8f8f;
+    margin-top: 8px;
+}
+
+footer * {
+    margin-top: 20px;
+}
+footer > div { /* BOX를 중앙정렬한 것이므로 이미지의 크기와 박스(div) 크기 차이 때문에 제대로 정렬 안 될 수 있다. */
+    display: flex; /* 따라서 display를 flex로 이용한다 */
+    justify-content: space-around;
+    width: 150px;
+    margin: 0 auto;
+}
+
+footer > p {
+    text-align: center;
+    margin-bottom: 20px;
+}
