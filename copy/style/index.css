@@ -45,6 +45,17 @@ header {
     border-bottom: solid 1px black;
 }
 
+#moveUp {
+    position : fixed;
+    height: 30px;
+    width : 30px;
+    /*정사각형으로 만들기 위해 절대값으로 크기 지정.. vw 단위도 있음! vw는 현재 width기준 비율을 나타냄*/
+    top : 100%;
+    left : 100%;
+    transform: translate(-150%);
+    opacity : 0;
+}
+
 #main {
     width: 100%;
 }

@@ -7,7 +7,24 @@
     <title>사진작가 하시시박 박원지</title>
     <link rel="stylesheet" href="style\init.css">
     <link rel="stylesheet" href="style\index.css">
+    <link rel="stylesheet" href="style\dynamic.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--위의 한 문장으로 jQuery Library가 알아서 들어감<CDN>:: Content Delivery Network-->
 </head>
+
+<!--<script>-->
+    <!--var logo = document.getElementById("logo");-->
+    <!--console.dir(logo);-->
+    <!--실행 불가능함. 이 시점에서는 body를 읽지 않았으므로 존재하지 않으므로-->
+    <!--HTML -> 순서대로 읽어간다!-->
+    <!--따라서 보통 script는 마지막에 추가한다.-->
+<!--</script>-->
+
+<!--<script>-->
+    <!--var logo = document.getElementById("logo");-->
+    <!--alert(logo == null);-->
+<!--</script>-->
+
 <body>
     <header>
         <!--RECAP)) HTML은 요소를 담기 위한 공간이지 꾸미는 공간이 아니다. -->
@@ -25,6 +42,7 @@
     </header>
     <img class="page" id="previous" src="res\previous.png" alt="previous article">
     <img class="page" id="next" src="res\next.png" alt="next article">
+    <img id="moveUp" src="res\arrow_top.png" alt="move up">
     <article>
         <img id="main" src="res\main.jpeg" alt="main">
         <p class="bold">BY <a href="http://cahierdeseoul.com/ko/author/admin/" >CAHIER DE SEOUL</a></p>
@@ -51,4 +69,18 @@
         <p>© COPYRIGHT 까이에 드 서울</p>
     </footer>
 </body>
+
+<!--<script>-->
+    <!--var logo = document.getElementById("logo");-->
+
+    <!--// var header = document.querySelector("header"); _ 조금 더 간단. getElements쓰면 [0] 처리가 필요한데 알아서 처리해줌.-->
+
+    <!--alert(logo == null);-->
+    <!--logo.addEventListener("click", function() {-->
+       <!--document.getElementsByTagName("header")[0].style.backgroundColor="orange";-->
+    <!--});-->
+    <!--//logo를 클릭하면 header의 색이 orange로 변하게 되도록-->
+<!--</script>-->
+
+<script src="js\myScript.js"></script>
 </html>
